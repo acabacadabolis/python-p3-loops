@@ -1,13 +1,27 @@
 #!/usr/bin/env python3
 
 def happy_new_year():
-    # code goes here!
-    pass
+    counter = 10
+    while (counter > 0):
+        print(counter)
+        counter = counter - 1
+    print("Happy New Year!")
 
 def square_integers(int_list):
-    # code goes here!
-    pass
+    square_list = [int**2 for int in int_list]
+    return square_list
 
 def fizzbuzz():
-    # code goes here!
-    pass
+    for num in range(1 ,101) :
+        print(f"{fizzbuzzPrinter(num)}")
+        # num = num + 1
+    
+def fizzbuzzPrinter(num):
+    if num % 3 == 0 and num % 5 == 0:
+        return "FizzBuzz"
+    elif num % 3 == 0:
+        return "Fizz"
+    elif num % 5 == 0:
+        return "Buzz"
+    else:
+        return num
